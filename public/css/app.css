@@ -1,0 +1,48 @@
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+.clickable,
+table th span {
+    cursor: pointer;
+}
+
+.alert svg {
+    margin-right: 10px;
+}
+.dtpicker-buttonCont .dtpicker-button {
+    background: #0d6efd;
+}
+.dtpicker-header .dtpicker-close {
+    color: #0d6efd;
+}
+.dtpicker-mobile .dtpicker-cont {
+    top: 40%;
+}
+svg.w-5.h-5 {
+    height: 15px;
+}
+.pagination a,
+.pagination span[aria-disabled="true"]{
+    text-decoration: none;
+    margin-right: 10px;
+}
+.pagination span[aria-current="page"] span {
+    margin-right: 8px;
+}
+.pagination > .flex.justify-between > .flex-1,
+.pagination > .flex.justify-between > .hidden > div:first-child {
+    display: none;
+}
+table thead a {
+    text-decoration: none;
+}
+table thead a span:first-child {
+    text-decoration: underline;
+}
+table thead span .fa {
+    color: var(--bs-table-color);
+}

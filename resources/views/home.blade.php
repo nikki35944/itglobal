@@ -15,7 +15,7 @@
             <tr>
                 <th >#</th>
                 <th>
-                    <a href="/?sort=title" data-sort="title" class="table-sort">
+                    <a href="#" data-sort="title" class="table-sort">
                         <span>Название задачи</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -24,7 +24,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="/?sort=user_id" data-sort="user_id" class="table-sort">
+                    <a href="#" data-sort="user_id" class="table-sort">
                         <span>Имя пользователя</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -33,7 +33,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="/?sort=statuses" data-sort="status_id" class="table-sort">
+                    <a href="#" data-sort="status_id" class="table-sort">
                         <span>Статус</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -42,7 +42,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="/?sort=due_time" data-sort="due_time" class="table-sort">
+                    <a href="#" data-sort="due_time" class="table-sort">
                         <span>Срок</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -51,7 +51,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="/?sort=completion_time" data-sort="completion_time" class="table-sort">
+                    <a href="#" data-sort="completion_time" class="table-sort">
                         <span>Дата выполнения</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>

@@ -16,10 +16,11 @@ class HomeController extends BaseController
             ->select(
                 'tasks.*',
                 'users.name as user_name',
+                'users.lastname as user_lastname',
                 'statuses.title as status_title',
             )
             ->filter()->paginate(10);
-        
+
         $currentDateTime = $this->service->getCurrentDatetime();
 
 

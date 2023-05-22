@@ -24,7 +24,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="#" data-sort="user_name" class="table-sort">
+                    <a href="#" data-sort="user_lastname" class="table-sort">
                         <span>Имя пользователя</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -70,7 +70,7 @@
                 ">
                         <th>{{ $task->id }}</th>
                         <td>{{ $task->title }}</td>
-                        <td>{{ $task->user->name }}</td>
+                        <td>{{ $task->user->name }} {{ $task->user->lastname }}</td>
                         <td>{{ $task->status->title }}</td>
                         <td>{{ $task->due_time }}</td>
                         <td>{{ $task->completion_time ? $task->completion_time : 'Не выполнено' }}</td>

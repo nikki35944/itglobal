@@ -16,23 +16,27 @@ $('table .table-sort').on('click', function (e) {
     let urlParams = new URLSearchParams(document.location.search);
 
     let dataSort = this.dataset.sort;
+    let dataSortDesc = dataSort + ',desc';
+    let currentSortParam = urlParams.get("sort");
 
-    let sortParam = urlParams.get("sort");
-    if (sortParam == null) {
+    if (currentSortParam == null) {
         let fullURL = originURL + '/?sort=' + dataSort;
         window.location.replace(fullURL);
     }
 
+    let currentOrderDesc = currentSortParam.slice(-5);
 
-    let currentOrderDesc = sortParam.slice(-5);
-
-    if (currentOrderDesc !== ',desc') {
+    if (currentOrderDesc !== ',desc' && currentSortParam === dataSort) {
         let fullURL = originURL + '/?sort=' + dataSort + ',desc';
-        console.log(fullURL);
         window.location.replace(fullURL);
-    } else {
-        let orderAsc = sortParam.slice(0, -5);
+    }
+    if (currentOrderDesc === ',desc' && currentSortParam === dataSortDesc) {
+        let orderAsc = currentSortParam.slice(0, -5);
         let fullURL = originURL + '/?sort=' + orderAsc;
         window.location.href = fullURL;
+    }
+    if (currentSortParam !== dataSort) {
+        let fullUrl = originURL + '/?sort=' + dataSort;
+        window.location.replace(fullUrl);
     }
 })

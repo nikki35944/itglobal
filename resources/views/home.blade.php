@@ -24,7 +24,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="#" data-sort="user_id" class="table-sort">
+                    <a href="#" data-sort="user_name" class="table-sort">
                         <span>Имя пользователя</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>
@@ -33,7 +33,7 @@
                     </a>
                 </th>
                 <th>
-                    <a href="#" data-sort="status_id" class="table-sort">
+                    <a href="#" data-sort="status_title" class="table-sort">
                         <span>Статус</span>
                         <span class="float-right text-sm">
                             <i class="fa fa-arrow-up"></i>

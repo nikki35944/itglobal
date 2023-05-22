@@ -11,7 +11,7 @@ class StoreController extends BaseController
     {
         $data = $request->validated();
 
-        Task::create($data);
+        Task::firstOrCreate($data);
 
         return redirect()->route('home')->with('message', 'Задача успешно добавлена');
     }

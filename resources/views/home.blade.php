@@ -62,8 +62,8 @@
         </div>
     </div>
 
-<div class="tasks-container">
-    <div class="d-flex pagination mt-30">
+<div class="tasks-container mt-30 mb-50">
+    <div class="d-flex pagination ">
         {{ $tasks->withQueryString()->links() }}
     </div>
 </div>

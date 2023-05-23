@@ -19,7 +19,7 @@ class HomeController extends BaseController
                 'users.lastname as user_lastname',
                 'statuses.title as status_title',
             )
-            ->filter()->paginate(10);
+            ->filter()->paginate(6);
 
         $currentDateTime = $this->service->getCurrentDatetime();
 

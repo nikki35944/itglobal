@@ -12,17 +12,11 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
-
     <title>ITGLOBAL Task manager</title>
 </head>
 <body class="bg-light">
-<div class="container">
-    <div class="row">
-        <div class="content mt-30">
-            @yield('content')
-        </div>
-    </div>
-</div>
+
+    @yield('content')
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

@@ -6,37 +6,22 @@ $(document).ready(function()
     });
 });
 
-
-
-$('table .table-sort').on('click', function (e) {
-    e.preventDefault();
-
+$('#nav__sort-tasks').on('change', function () {
     let url = new URL(document.URL);
     let originURL = url.origin;
-    let urlParams = new URLSearchParams(document.location.search);
+    let sortParam = this.value;
+    let fullURL = originURL + '/?sort=' + sortParam;
 
-    let dataSort = this.dataset.sort;
-    let dataSortDesc = dataSort + ',desc';
-    let currentSortParam = urlParams.get("sort");
+    window.location.replace(fullURL);
+});
 
-    if (currentSortParam == null) {
-        let fullURL = originURL + '/?sort=' + dataSort;
-        window.location.replace(fullURL);
-    }
+$('.card .task__edit-link').on('click', function (){
 
-    let currentOrderDesc = currentSortParam.slice(-5);
+    let editLinkContainer = this.querySelector('.edit-link__container');
 
-    if (currentOrderDesc !== ',desc' && currentSortParam === dataSort) {
-        let fullURL = originURL + '/?sort=' + dataSort + ',desc';
-        window.location.replace(fullURL);
+    if ( editLinkContainer.style.display === 'none' || !editLinkContainer.style.display) {
+        editLinkContainer.style.display = 'block';
+    } else {
+        editLinkContainer.style.display = 'none';
     }
-    if (currentOrderDesc === ',desc' && currentSortParam === dataSortDesc) {
-        let orderAsc = currentSortParam.slice(0, -5);
-        let fullURL = originURL + '/?sort=' + orderAsc;
-        window.location.href = fullURL;
-    }
-    if (currentSortParam !== dataSort) {
-        let fullUrl = originURL + '/?sort=' + dataSort;
-        window.location.replace(fullUrl);
-    }
-})
+});
